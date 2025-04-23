@@ -1,3 +1,5 @@
+# Developer: Oluwaseyi R. Afolayan 
+
 cmake_minimum_required(VERSION 3.8)
 project(rmp_description)
 
@@ -8,5 +10,11 @@ endif()
 # find dependencies
 find_package(ament_cmake REQUIRED)
 find_package(xacro REQUIRED)
+find_package(ur_description REQUIRED)
+
+install(
+  DIRECTORY urdf
+  DESTINATION share/${PROJECT_NAME}
+)
 
 ament_package()
